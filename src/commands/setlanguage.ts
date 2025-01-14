@@ -8,7 +8,7 @@ export const data = new SlashCommandBuilder()
   .setDescription("Set the bot language")
   .addStringOption((option) => option.setName("language").setDescription("Language code (e.g., en, pt-br)").setRequired(true));
 
-export async function execute(interaction: CommandInteraction) {
+export async function execute(interaction: CommandInteraction, createEmbed: Function) {
   if (!interaction.memberPermissions?.has(PermissionFlagsBits.Administrator)) {
     return interaction.reply("You do not have permission to use this command.");
   }
@@ -26,5 +26,7 @@ export async function execute(interaction: CommandInteraction) {
     create: { guildId, language },
   });
 
-  return interaction.reply(`Language set to ${language}`);
+  const reply = `Language set to ${language}`;
+  const embed = createEmbed("Set Language", reply);
+  return interaction.reply({ embeds: [embed] });
 }

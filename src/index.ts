@@ -14,6 +14,19 @@ const prisma = new PrismaClient();
 console.log("DISCORD_TOKEN:", config.DISCORD_TOKEN);
 console.log("DISCORD_CLIENT_ID:", config.DISCORD_CLIENT_ID);
 
+function createEmbed(title: string, description: string) {
+  return {
+    color: 0x0099ff,
+    title,
+    description,
+    timestamp: new Date().toISOString(),
+    footer: {
+      text: "Bot Footer",
+      icon_url: "https://i.imgur.com/wSTFkRM.png",
+    },
+  };
+}
+
 client.once("ready", async () => {
   console.log("Discord bot is ready! 🤖");
   const guilds = await client.guilds.fetch();
@@ -42,7 +55,7 @@ client.on("interactionCreate", async (interaction) => {
   }
 
   if (commands[commandName as keyof typeof commands]) {
-    commands[commandName as keyof typeof commands].execute(interaction);
+    commands[commandName as keyof typeof commands].execute(interaction, createEmbed);
   }
 });
 
