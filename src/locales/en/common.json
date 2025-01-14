@@ -2,5 +2,15 @@
   "hello": "Hello!",
   "pong": "Pong!",
   "serverInfo": "Server name: {{name}}\nTotal members: {{count}}",
-  "userInfo": "Your tag: {{tag}}\nYour id: {{id}}"
+  "userInfo": "Your tag: {{tag}}\nYour id: {{id}}",
+  "embedTitle": "Embed Title",
+  "embedAuthor": "Embed Author",
+  "embedDescription": "Embed Description",
+  "embedField1Name": "Field 1",
+  "embedField1Value": "Field 1 Value",
+  "embedField2Name": "Field 2",
+  "embedField2Value": "Field 2 Value",
+  "embedField3Name": "Field 3",
+  "embedField3Value": "Field 3 Value",
+  "embedFooter": "Embed Footer"
 }

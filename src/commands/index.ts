@@ -3,6 +3,7 @@ import * as hello from "./hello";
 import * as server from "./server";
 import * as user from "./user";
 import * as setlanguage from "./setlanguage";
+import * as embed from "./embed";
 
 export const commands = {
   ping,
@@ -10,4 +11,5 @@ export const commands = {
   server,
   user,
   setlanguage,
+  embed,
 };
