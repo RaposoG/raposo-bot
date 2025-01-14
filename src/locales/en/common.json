@@ -1,0 +1,6 @@
+{
+  "hello": "Hello!",
+  "pong": "Pong!",
+  "serverInfo": "Server name: {{name}}\nTotal members: {{count}}",
+  "userInfo": "Your tag: {{tag}}\nYour id: {{id}}"
+}
